@@ -17,10 +17,9 @@ if (method == 1):
         return y1predict
 
     def corrector(x, y, x1, y1, h): 
-        err = 0.00001 
         y1correct = y1
 
-        while (abs(y1correct - y1) > err + 1): 
+        while (abs(y1correct - y1) > 1): 
             y1 = y1correct
             y1correct = y + 0.5 * h * (f(x, y) + f(x1, y1))  
         return y1correct
